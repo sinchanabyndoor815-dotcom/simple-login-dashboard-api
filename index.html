@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="page active">
+        <div class="login-container">
+            <div class="login-card">
+                <h1>Welcome Back</h1>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" required>
+                        <span class="error-message" id="usernameError"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                        <span class="error-message" id="passwordError"></span>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboardPage" class="page">
+        <header class="dashboard-header">
+            <h1 id="welcomeMessage">Welcome, User!</h1>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </header>
+        
+        <main class="dashboard-main">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>News 📰</h3>
+                    <div class="stat-number" id="newsData"></div>
+                </div>
+                <div class="stat-card">
+                    <h3>Weather ⛅</h3>
+                    <div class="stat-number" id="weatherData"></div>
+                </div>
+                <div class="stat-card">
+                    <h3>Location📍</h3>
+                    <div class="stat-number" id="locationData"></div>
+                </div>
+            </div>
+
+            <div class="api-data-section">
+                <h2>Recent Activity</h2>
+                <div id="apiData" class="api-grid">
+                    <div class="loading">Fetching data...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
